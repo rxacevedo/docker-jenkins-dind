@@ -11,7 +11,6 @@ RUN apt-get update -qq && \
 RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 RUN echo deb https://apt.dockerproject.org/repo ubuntu-trusty main > /etc/apt/sources.list.d/docker.list
 
-# Honestly Maven should be part of the Docker Image in which the test is run, not Jenkins itself.
 RUN apt-get update -qq && apt-get install -qqy \
             ca-certificates \
             docker-engine \
